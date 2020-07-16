@@ -18,4 +18,10 @@ public class TestOrderedArray {
 		assertEquals(-1, oa.binarySearch(100));
 		assertEquals(1, oa.binarySearch(10));
 	}
+	
+	@Test
+	public void demo() {
+		OrderedArrayDemo oad = new OrderedArrayDemo();
+		oad.orderArraydemo();
+	}
 }
