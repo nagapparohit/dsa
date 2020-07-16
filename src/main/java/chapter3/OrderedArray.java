@@ -32,7 +32,7 @@ public class OrderedArray {
 	public int binarySearch(int item) {
 		int maxIndex = size()-1;
 		int minIndex = 0;
-		int indexToLook = (int) Math.floor((minIndex+maxIndex/2));
+		int indexToLook = (int) Math.floor(((minIndex+maxIndex)/2));
 		
 		while((data[indexToLook] != item)&&(maxIndex > minIndex)) {
 			
@@ -41,7 +41,7 @@ public class OrderedArray {
 			}else {
 				minIndex = indexToLook +1;
 			}
-			indexToLook = (int) Math.floor((minIndex+maxIndex/2));
+			indexToLook = (int) Math.floor(((minIndex+maxIndex)/2));
 		}
 		
 		if(data[indexToLook]==item)
@@ -50,7 +50,7 @@ public class OrderedArray {
 			return -1;
 	}
 	
-	private int binarySearch(int item,int minIndex,int maxIndex){
+	public int binarySearch(int item,int minIndex,int maxIndex){
 		if(minIndex == maxIndex) {
 			if(data[minIndex] == item) {
 				return minIndex;
@@ -100,7 +100,7 @@ public class OrderedArray {
 	}
 	
 	
-	private void shiftElementstoLeft(int startIndex) {
+	public void shiftElementstoLeft(int startIndex) {
 		int maxIndex = size()-1;
 		for(int i = startIndex;i<= maxIndex;i++) {
 			data[i-1]=data[i];
@@ -113,7 +113,7 @@ public class OrderedArray {
 	 * 
 	 * @param startIndex
 	 */
-	private void shiftElementsToRight(int startIndex) {
+	public void shiftElementsToRight(int startIndex) {
 		for(int i=size()-1; i >= startIndex;i--) {
 			data[i+1]= data[i];
 		}
@@ -125,7 +125,7 @@ public class OrderedArray {
 	 * elements are really present in the ordered way.
 	 * @return
 	 */
-	private int size() {
+	public int size() {
 		int i=0;
 		while((i<data.length )&& (data[i] != null)) {
 			i++;
