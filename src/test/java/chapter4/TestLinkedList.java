@@ -16,7 +16,8 @@ public class TestLinkedList {
 		integers.addAtStart(12);
 		integers.addAtStart(19);
 		integers.addAtStart(20);
-		assertEquals(6,integers.length());
+		integers.addAtStart(30);
+		assertEquals(7,integers.length());
 		assertEquals(null,integers.find(120));
 		
 	}
